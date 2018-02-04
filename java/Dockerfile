@@ -1,13 +1,9 @@
 FROM ubuntu:18.04
+MAINTAINER Matthew Herod <matthew.herod@gmail.com>
 
 RUN apt-get update
-RUN apt-get install -y openjdk-8-jdk
-RUN apt-get install -y ant
-RUN apt-get install -y curl
-RUN apt-get install -y coreutils
-
+RUN apt-get install -y openjdk-8-jdk ant curl coreutils tar software-properties-common libmysql-java
 RUN apt-get clean
-
 RUN apt-get upgrade -y
 
 RUN rm -rf /var/lib/apt/lists/*
