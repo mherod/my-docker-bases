@@ -10,8 +10,7 @@ jobs:
       - checkout
       - setup_remote_docker
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: docker build -t mherod/base-ubuntu-java java
-      - run: docker push mherod/base-ubuntu-java
+      - run: sh build.sh
 workflows:
   version: 2
   commit:
