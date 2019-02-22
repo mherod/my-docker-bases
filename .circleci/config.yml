@@ -8,8 +8,8 @@ jobs:
       TERM: dumb
     steps:
       - checkout
+      - run: echo $DOCKER_CONFIG | base64 -d > $HOME/.docker/config.json
       - setup_remote_docker
-      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
       - run: sh build.sh
 workflows:
   version: 2
