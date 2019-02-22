@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ "$USER" == "matthewherod" ]]; then 
+if [ "$USER" = "matthewherod" ] ; then 
 	eval $(docker-machine env)
 fi
 for a in `find . -name "Dockerfile" -execdir pwd \;` ; do
