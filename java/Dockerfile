@@ -1,5 +1,4 @@
-# FROM ubuntu:18.04
-FROM mherod/base-ubuntu-java:latest
+FROM ubuntu:18.04
 MAINTAINER Matthew Herod <matthew.herod@gmail.com>
 RUN apt-get update
 RUN apt-get install -y openjdk-8-jdk ant wget curl coreutils tar software-properties-common libmysql-java
