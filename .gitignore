@@ -25,3 +25,4 @@ crashlytics-build.properties
 fabric.properties
 *.iml
 *.ipr
+.idea/aws.xml
