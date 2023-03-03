@@ -1,4 +1,4 @@
-FROM cimg/node:16.19-browsers
+FROM cimg/node:18.14-browsers
 MAINTAINER Matthew Herod <matthew.herod@gmail.com>
 RUN sudo apt-get update && sudo apt-get install apt-transport-https ca-certificates gnupg
 RUN echo "deb https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
