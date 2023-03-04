@@ -8,9 +8,12 @@ jobs:
       TERM: dumb
     steps:
       - checkout
-      - run: mkdir -p $HOME/.docker/ && ( echo $DOCKER_CFG | base64 -d > $HOME/.docker/config.json )
+      - run: mkdir -p $HOME/.docker/ && ( echo $DOCKER_CFG | base64 -d >
+          $HOME/.docker/config.json )
       - setup_remote_docker
       - run: sh build.sh
+    # The resource_class feature allows configuring CPU and RAM resources for each job. Different resource classes are available for different executors. https://circleci.com/docs/2.0/configuration-reference/#resourceclass
+    resource_class: large
 workflows:
   version: 2
   commit:
