@@ -5,7 +5,7 @@ RUN echo "deb https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -
 RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 RUN sudo apt-get update && sudo apt-get install google-cloud-cli wget curl coreutils tar
 RUN sudo apt-get upgrade -y
-RUN sudo npm install --global yarn
+RUN sudo npm install --global --force yarn
 RUN sudo yarn global add firebase-tools
 RUN sudo yarn global add ts-node
 RUN curl -sL https://firebase.tools | bash
